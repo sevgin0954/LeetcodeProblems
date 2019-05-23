@@ -8,7 +8,7 @@ class Program
         var nums = new int[] { -1, 0, 1, 2, -1, -4 };
         //var nums = new int[] { -4, 2, 2 };
         var combinations = ThreeSum(nums);
-        Print.PrintNumbersCollections(combinations);
+        Print.PrintLine(combinations);
     }
 
     public static IList<IList<int>> ThreeSum(int[] nums)

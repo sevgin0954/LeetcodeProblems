@@ -9,7 +9,7 @@ class Program
         var numbers = new int[] { -1, 0, 1, 2, -1, -4 };
         var targetSum = -1;
         var combinations = FourSum(numbers, targetSum);
-        Print.PrintNumbersCollections(combinations);
+        Print.PrintLine(combinations);
     }
 
     public static IList<IList<int>> FourSum(int[] nums, int targetSum)
