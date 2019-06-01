@@ -75,6 +75,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "101. Symmetric Tree", "101.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104. Maximum Depth of Binary Tree", "104. Maximum Depth of Binary Tree\104. Maximum Depth of Binary Tree.csproj", "{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "108. Convert Sorted Array to Binary Search Tree", "108. Convert Sorted Array to Binary Search Tree\108. Convert Sorted Array to Binary Search Tree.csproj", "{7FCF6001-2C49-48F8-9786-284F4D0E2AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "110. Balanced Binary Tree", "110. Balanced Binary Tree\110. Balanced Binary Tree.csproj", "{131E3C42-121E-4E2B-A713-6E31E30F8C75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "111. Minimum Depth of Binary Tree", "111. Minimum Depth of Binary Tree\111. Minimum Depth of Binary Tree.csproj", "{7B6B0519-F331-4D1C-968A-7756CCD29B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "112. Path Sum", "112. Path Sum\112. Path Sum.csproj", "{7AEB7630-E7CD-4298-A682-7553895AFEC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +233,22 @@ Global
 		{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FCF6001-2C49-48F8-9786-284F4D0E2AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FCF6001-2C49-48F8-9786-284F4D0E2AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FCF6001-2C49-48F8-9786-284F4D0E2AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FCF6001-2C49-48F8-9786-284F4D0E2AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131E3C42-121E-4E2B-A713-6E31E30F8C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131E3C42-121E-4E2B-A713-6E31E30F8C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131E3C42-121E-4E2B-A713-6E31E30F8C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131E3C42-121E-4E2B-A713-6E31E30F8C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B6B0519-F331-4D1C-968A-7756CCD29B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6B0519-F331-4D1C-968A-7756CCD29B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6B0519-F331-4D1C-968A-7756CCD29B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6B0519-F331-4D1C-968A-7756CCD29B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AEB7630-E7CD-4298-A682-7553895AFEC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEB7630-E7CD-4298-A682-7553895AFEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEB7630-E7CD-4298-A682-7553895AFEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEB7630-E7CD-4298-A682-7553895AFEC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
