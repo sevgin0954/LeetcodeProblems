@@ -53,19 +53,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "28. Implement strStr()", "2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "24. Swap Nodes in Pairs", "24. Swap Nodes in Pairs\24. Swap Nodes in Pairs.csproj", "{DAD0C379-1B4C-47B3-BADA-1ED0928595BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "38. Count and Say", "38. Count and Say\38. Count and Say.csproj", "{B9791EF5-BF02-41CA-9B9B-E4D9E447D4F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "38. Count and Say", "38. Count and Say\38. Count and Say.csproj", "{B9791EF5-BF02-41CA-9B9B-E4D9E447D4F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "46. Permutations", "46. Permutations\46. Permutations.csproj", "{74CBFBF3-D600-40BC-A421-704EE7E6C9CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "46. Permutations", "46. Permutations\46. Permutations.csproj", "{74CBFBF3-D600-40BC-A421-704EE7E6C9CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "48. Rotate Image", "48. Rotate Image\48. Rotate Image.csproj", "{6D517D83-F4C1-47F7-A5A0-2330286918DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "48. Rotate Image", "48. Rotate Image\48. Rotate Image.csproj", "{6D517D83-F4C1-47F7-A5A0-2330286918DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "49. Group Anagrams", "49. Group Anagrams\49. Group Anagrams.csproj", "{A8ED70C9-F40D-42FE-A2F4-4D446C2C88AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "49. Group Anagrams", "49. Group Anagrams\49. Group Anagrams.csproj", "{A8ED70C9-F40D-42FE-A2F4-4D446C2C88AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "43. Multiply Strings", "43. Multiply Strings\43. Multiply Strings.csproj", "{CFC55CA8-4B11-4D4C-806B-2DE4A45F48F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "43. Multiply Strings", "43. Multiply Strings\43. Multiply Strings.csproj", "{CFC55CA8-4B11-4D4C-806B-2DE4A45F48F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35. Search Insert Position", "35. Search Insert Position\35. Search Insert Position.csproj", "{9DF6AA26-6DFD-4E8A-B031-684695D10725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "35. Search Insert Position", "35. Search Insert Position\35. Search Insert Position.csproj", "{9DF6AA26-6DFD-4E8A-B031-684695D10725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "40. Combination Sum II", "40. Combination Sum II\40. Combination Sum II.csproj", "{1D529D2C-4468-434D-A96B-19506AF4972B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "40. Combination Sum II", "40. Combination Sum II\40. Combination Sum II.csproj", "{1D529D2C-4468-434D-A96B-19506AF4972B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "98. Validate Binary Search Tree", "98. Validate Binary Search Tree\98. Validate Binary Search Tree.csproj", "{39C4280D-83ED-4E26-91E2-AEF96093406F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "100. Same Tree", "100. Same Tree\100. Same Tree.csproj", "{D4E4E1CA-EDCC-4AF5-8331-1BE133CF0CA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "101. Symmetric Tree", "101. Symmetric Tree\101. Symmetric Tree.csproj", "{656D835D-ED7E-4220-9CA7-04336C12F852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104. Maximum Depth of Binary Tree", "104. Maximum Depth of Binary Tree\104. Maximum Depth of Binary Tree.csproj", "{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +209,22 @@ Global
 		{1D529D2C-4468-434D-A96B-19506AF4972B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D529D2C-4468-434D-A96B-19506AF4972B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D529D2C-4468-434D-A96B-19506AF4972B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39C4280D-83ED-4E26-91E2-AEF96093406F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C4280D-83ED-4E26-91E2-AEF96093406F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C4280D-83ED-4E26-91E2-AEF96093406F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C4280D-83ED-4E26-91E2-AEF96093406F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E4E1CA-EDCC-4AF5-8331-1BE133CF0CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E4E1CA-EDCC-4AF5-8331-1BE133CF0CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E4E1CA-EDCC-4AF5-8331-1BE133CF0CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E4E1CA-EDCC-4AF5-8331-1BE133CF0CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656D835D-ED7E-4220-9CA7-04336C12F852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656D835D-ED7E-4220-9CA7-04336C12F852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656D835D-ED7E-4220-9CA7-04336C12F852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656D835D-ED7E-4220-9CA7-04336C12F852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E21607-4F7B-4D95-ABE0-4CABB2D888B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
