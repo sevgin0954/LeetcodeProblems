@@ -83,7 +83,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "111. Minimum Depth of Binar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "112. Path Sum", "112. Path Sum\112. Path Sum.csproj", "{7AEB7630-E7CD-4298-A682-7553895AFEC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1114. Print in Order", "1114. Print in Order\1114. Print in Order.csproj", "{2F8A8BF4-EBFA-4AE2-A0CA-ABBD1484EA50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1114. Print in Order", "1114. Print in Order\1114. Print in Order.csproj", "{2F8A8BF4-EBFA-4AE2-A0CA-ABBD1484EA50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "79. Word Search", "79. Word Search\79. Word Search.csproj", "{91208241-4597-4ACB-A91B-50F6C6CC4502}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -255,6 +257,10 @@ Global
 		{2F8A8BF4-EBFA-4AE2-A0CA-ABBD1484EA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F8A8BF4-EBFA-4AE2-A0CA-ABBD1484EA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F8A8BF4-EBFA-4AE2-A0CA-ABBD1484EA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91208241-4597-4ACB-A91B-50F6C6CC4502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91208241-4597-4ACB-A91B-50F6C6CC4502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91208241-4597-4ACB-A91B-50F6C6CC4502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91208241-4597-4ACB-A91B-50F6C6CC4502}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
