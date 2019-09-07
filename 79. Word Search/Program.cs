@@ -22,6 +22,13 @@ namespace _79._Word_Search
         {
             var rowsCount = board.Length;
             var colsCount = board[0].Length;
+
+            var totalCellsCount = rowsCount * colsCount;
+            if (word.Length > totalCellsCount)
+            {
+                return false;
+            }
+
             for (int rowIndex = 0; rowIndex < rowsCount; rowIndex++)
             {
                 for (int colIndex = 0; colIndex < colsCount; colIndex++)
