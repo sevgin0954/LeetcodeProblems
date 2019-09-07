@@ -5,37 +5,32 @@ public class Solution
 {
     public static void Main()
     {
-        int[] nums = new int[] { 3, 2, 4 };
-        int target = 6;
+        var nums = new int[] { 2, 7 };
+        var targetSum = 9;
 
-        var result = TwoSum(nums, target);
+        var result = TwoSum(nums, targetSum);
         Console.WriteLine(string.Join(", ", result));
     }
 
-    public static int[] TwoSum(int[] nums, int target)
+    public static int[] TwoSum(int[] nums, int targetSum)
     {
-        var rightHalfsLeftHalfsIndexes = new Dictionary<int, int>();
-        var targetSumIndexes = new int[2];
+        var numsIndexes = new Dictionary<int, int>(nums.Length);
 
         for (int i = 0; i < nums.Length; i++)
         {
-            var leftHalfSum = nums[i];
-            if (rightHalfsLeftHalfsIndexes.ContainsKey(leftHalfSum))
-            {
-                var leftIndex = rightHalfsLeftHalfsIndexes[leftHalfSum];
-                var rightIndex = i;
-                targetSumIndexes[0] = leftIndex;
-                targetSumIndexes[1] = rightIndex;
+            var currentNum = nums[i];
+            var currentDifference = targetSum - currentNum;
 
-                break;
-            }
-            else
+            if (numsIndexes.ContainsKey(currentDifference))
             {
-                var rightHalfSum = target - nums[i];
-                rightHalfsLeftHalfsIndexes[rightHalfSum] = i;
+                var leftIndex = numsIndexes[currentDifference];
+                var rightIndex = i;
+                return new int[] { leftIndex, rightIndex };
             }
+
+            numsIndexes[currentNum] = i;
         }
 
-        return targetSumIndexes;
+        throw new InvalidOperationException("Not Found");
     }
 }

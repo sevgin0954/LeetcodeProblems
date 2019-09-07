@@ -11,30 +11,27 @@ class Program
 
     public static int LengthOfLongestSubstring(string str)
     {
-        int bestLength = 0;
+        var charsIndexes = new Dictionary<char, int>(str.Length);
+        var bestLength = 0;
 
-        int currentLength = 0;
-        int currentStartIndex = 0;
-        Dictionary<char, int> lettersIndexes = new Dictionary<char, int>();
-        for (int currentIndex = 0; currentIndex < str.Length; currentIndex++)
+        var currentLength = 0;
+        var startIndex = 0;
+        for (int i = 0; i < str.Length; i++)
         {
-            var currentLetter = str[currentIndex];
-
-            if (lettersIndexes.ContainsKey(currentLetter) == false || lettersIndexes[currentLetter] < currentStartIndex)
+            var currentChar = str[i];
+            if (charsIndexes.ContainsKey(currentChar) && charsIndexes[currentChar] >= startIndex)
             {
-                currentLength++;
-            }
-            else
-            {
-                currentStartIndex = lettersIndexes[currentLetter];
-                currentLength = currentIndex - currentStartIndex;
+                startIndex = charsIndexes[currentChar] + 1;
+                currentLength = i - startIndex;
             }
 
+            currentLength++;
             if (currentLength > bestLength)
             {
                 bestLength = currentLength;
             }
-            lettersIndexes[currentLetter] = currentIndex;
+
+            charsIndexes[currentChar] = i;
         }
 
         return bestLength;

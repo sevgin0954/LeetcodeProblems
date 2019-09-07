@@ -16,7 +16,7 @@ class Program
             return new List<string>();
         }
 
-        var digitsLetters = new Dictionary<char, string>()
+        var digitsLetters = new Dictionary<char, string>(8)
         {
             { '2', "abc" },
             { '3', "def" },
@@ -30,7 +30,7 @@ class Program
 
         var letters = GetLettersFromDigits(digits, digitsLetters);
         var combinations = new List<string>();
-        GenerateAllCombinations(combinations, letters, new char[4]);
+        GenerateAllCombinations(combinations, letters, new char[digits.Length]);
 
         return combinations;
     }
@@ -47,7 +47,7 @@ class Program
     }
 
     public static void GenerateAllCombinations(
-        List<string> resultCombination, 
+        List<string> resultCombination,
         string[] letters,
         char[] currentCombination,
         int index = 0)
@@ -55,15 +55,15 @@ class Program
         if (index == letters.Length)
         {
             var currentCombinationString = string.Join("", currentCombination);
-            currentCombinationString = currentCombinationString.TrimEnd('\0');
             resultCombination.Add(currentCombinationString);
 
             return;
         }
 
-        for (int i = 0; i < letters[index].Length; i++)
+        var currentLetters = letters[index];
+        for (int i = 0; i < currentLetters.Length; i++)
         {
-            currentCombination[index] = letters[index][i];
+            currentCombination[index] = currentLetters[i];
             GenerateAllCombinations(resultCombination, letters, currentCombination, index + 1);
         }
     }

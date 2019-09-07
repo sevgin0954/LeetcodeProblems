@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 class Program
 {
     static void Main()
     {
-        //var nums = new int[] { 3, 2, 3, 5 };
-        //var target = 8;
         var nums = new int[] { 10, 1, 2, 7, 6, 1, 5 };
         var target = 8;
         var cominations = CombinationSum2(nums, target);
@@ -15,9 +14,11 @@ class Program
 
     public static IList<IList<int>> CombinationSum2(int[] candidates, int target)
     {
+        var filteredCandidates = candidates.Where(c => c <= target).ToArray();
+        Array.Sort(filteredCandidates);
+
         var combinations = new List<IList<int>>();
-        Array.Sort(candidates);
-        GenerateAllUniqueCombinationWithSum(combinations, new Stack<int>(), candidates, target);
+        GenerateAllUniqueCombinationWithSum(combinations, new Stack<int>(), filteredCandidates, target);
 
         return combinations;
     }
@@ -34,14 +35,14 @@ class Program
             combinationResult.Add(currentCombination.ToArray());
             return;
         }
+        if (targetSum < 0)
+        {
+            return;
+        }
 
         for (int i = startIndex; i < nums.Length; i++)
         {
             if (i != startIndex && nums[i - 1] == nums[i])
-            {
-                continue;
-            }
-            if (nums[i] > targetSum)
             {
                 continue;
             }

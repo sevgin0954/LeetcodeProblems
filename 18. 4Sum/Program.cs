@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 class Program
 {
@@ -12,98 +11,67 @@ class Program
         Print.PrintLine(combinations);
     }
 
-    public static IList<IList<int>> FourSum(int[] nums, int targetSum)
+    public static IList<IList<int>> FourSum(int[] nums, int target)
     {
         Array.Sort(nums);
 
         var combinations = new List<IList<int>>();
 
-        for (int i = 0; i < nums.Length - 3; i++)
+        for (int i1 = 0; i1 < nums.Length - 3; i1++)
         {
-            if (i != 0 && nums[i - 1] == nums[i])
+            if (i1 > 0 && IsAlreasdyCalculated(nums, i1))
             {
                 continue;
             }
 
-            var searchedSum = targetSum - nums[i];
-            var currentThreeCombinations = ThreeSumUnique(nums, searchedSum, i + 1);
-            var currentFourCombinations = ConcatNumbersInFromOfNumbersCollections(currentThreeCombinations, nums[i]);
-            combinations.AddRange(currentFourCombinations);
-        }
-
-        return combinations;
-    }
-
-    private static IList<IList<int>> ThreeSumUnique(int[] nums, int targetSum, int startIndex)
-    {
-        var combinations = new List<IList<int>>();
-
-        for (int i = startIndex; i < nums.Length - 2; i++)
-        {
-            if (i != startIndex && nums[i - 1] == nums[i])
+            for (int i2 = i1 + 1; i2 < nums.Length - 2; i2++)
             {
-                continue;
-            }
-
-            var searchedSum = targetSum - nums[i];
-            var currentTwoCombinations = TwoSumUnique(nums, searchedSum, i + 1);
-            var currentThreeCombinations =
-                ConcatNumbersInFromOfNumbersCollections(currentTwoCombinations, nums[i]);
-            combinations.AddRange(currentThreeCombinations);
-        }
-
-        return combinations;
-    }
-
-    private static IList<IList<int>> TwoSumUnique(int[] nums, int targetSum, int startIndex)
-    {
-        var combinations = new List<IList<int>>();
-
-        int leftIndex = startIndex;
-        int rightIndex = nums.Length - 1;
-        while (leftIndex < rightIndex)
-        {
-            var currentSum = nums[leftIndex] + nums[rightIndex];
-            if (currentSum == targetSum)
-            {
-                var currentCombination = new int[] { nums[leftIndex], nums[rightIndex] };
-                combinations.Add(currentCombination);
-                while (leftIndex < rightIndex && nums[leftIndex] == nums[leftIndex + 1])
+                if (i2 > i1 + 1 && IsAlreasdyCalculated(nums, i2))
                 {
-                    leftIndex++;
-                }
-                while (leftIndex < rightIndex && nums[rightIndex] == nums[rightIndex - 1])
-                {
-                    rightIndex--;
+                    continue;
                 }
 
-                leftIndex++;
-                rightIndex--;
-            }
-            else if (currentSum > targetSum)
-            {
-                rightIndex--;
-            }
-            else if (currentSum < targetSum)
-            {
-                leftIndex++;
+                var searchedSum = target - (nums[i1] + nums[i2]);
+
+                var leftIndex = i2 + 1;
+                var rightIndex = nums.Length - 1;
+                while (leftIndex < rightIndex)
+                {
+                    var currentSum = nums[leftIndex] + nums[rightIndex];
+                    if (currentSum > searchedSum)
+                    {
+                        rightIndex--;
+                    }
+                    else if (currentSum < searchedSum)
+                    {
+                        leftIndex++;
+                    }
+                    else
+                    {
+                        var currentCombination = new int[] { nums[i1], nums[i2], nums[leftIndex], nums[rightIndex] };
+                        combinations.Add(currentCombination);
+
+                        leftIndex++;
+                        rightIndex--;
+
+                        while (leftIndex < rightIndex && nums[leftIndex] == nums[leftIndex - 1])
+                        {
+                            leftIndex++;
+                        }
+                        while (leftIndex < rightIndex && nums[rightIndex] == nums[rightIndex + 1])
+                        {
+                            rightIndex--;
+                        }
+                    }
+                }
             }
         }
 
         return combinations;
     }
 
-    private static IList<IList<int>> ConcatNumbersInFromOfNumbersCollections(
-        IList<IList<int>> numbersCollection, 
-        params int[] nums)
+    private static bool IsAlreasdyCalculated(int[] nums, int index)
     {
-        var concatedNumbersCollections = new List<IList<int>>();
-
-        foreach (var currentNumberCollection in numbersCollection)
-        {
-            concatedNumbersCollections.Add(nums.Concat(currentNumberCollection).ToList());
-        }
-
-        return concatedNumbersCollections;
+        return nums[index - 1] == nums[index];
     }
 }

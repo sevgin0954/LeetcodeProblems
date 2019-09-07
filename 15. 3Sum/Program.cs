@@ -34,17 +34,18 @@ class Program
                 {
                     var currentCombination = new int[] { nums[i], nums[leftIndex], nums[rightIndex] };
                     combinations.Add(currentCombination);
-                    while (leftIndex < rightIndex && nums[leftIndex] == nums[leftIndex + 1])
-                    {
-                        leftIndex++;
-                    }
-                    while (leftIndex < rightIndex && nums[rightIndex] == nums[rightIndex - 1])
-                    {
-                        rightIndex--;
-                    }
 
                     leftIndex++;
                     rightIndex--;
+
+                    while (leftIndex < rightIndex && nums[leftIndex] == nums[leftIndex - 1])
+                    {
+                        leftIndex++;
+                    }
+                    while (leftIndex < rightIndex && nums[rightIndex] == nums[rightIndex + 1])
+                    {
+                        rightIndex--;
+                    }
                 }
                 else if (currentSum < searchedSum)
                 {

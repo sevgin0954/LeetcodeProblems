@@ -12,45 +12,32 @@ class Program
         Console.WriteLine(RemoveNthFromEnd(head, n));
     }
 
-    public static ListNode RemoveNthFromEnd(ListNode head, int n)
+    public static ListNode RemoveNthFromEnd(ListNode root, int n)
     {
-        var nodes = GetNodesAsList(head);
-
-        if (nodes.Count == 1)
-        {
-            return null;
-        }
-
-        var NthNodeIndex = nodes.Count - n;
-        if (n == nodes.Count)
-        {
-            head = head.next;
-        }
-        else if (n == 1)
-        {
-            nodes[NthNodeIndex - 1].next = null;
-        }
-        else
-        {
-            var prevNode = nodes[NthNodeIndex - 1];
-            var nextNode = nodes[NthNodeIndex + 1];
-            prevNode.next = nextNode;
-        }
-
-        return head;
-    }
-
-    private static IList<ListNode> GetNodesAsList(ListNode head)
-    {
+        var currentNode = root;
         var nodes = new List<ListNode>();
-
-        var currentNode = head;
         while (currentNode != null)
         {
             nodes.Add(currentNode);
             currentNode = currentNode.next;
         }
 
-        return nodes;
+        var nthNodeIndex = nodes.Count - n;
+        var nthNode = nodes[nthNodeIndex];
+        var nthNodeNext = nthNode.next;
+        if (nthNodeIndex == 0)
+        {
+            if (nthNodeNext == null)
+            {
+                return null;
+            }
+
+            return nthNodeNext;
+        }
+
+        var nthNodePrev = nodes[nthNodeIndex - 1];
+        nthNodePrev.next = nthNodeNext;
+
+        return root;
     }
 }

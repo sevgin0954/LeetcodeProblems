@@ -5,18 +5,18 @@ public class Solution
 {
     public static void Main()
     {
-        var num1Head = new ListNode(1, 8);
-        var num2Head = new ListNode(0);
+        var num1Root = new ListNode(1, 8);
+        var num2Root = new ListNode(0);
 
-        Console.WriteLine(AddTwoNumbers(num1Head, num2Head));
+        Console.WriteLine(AddTwoNumbers(num1Root, num2Root));
     }
 
-    public static ListNode AddTwoNumbers(ListNode num1Head, ListNode num2Head)
+    public static ListNode AddTwoNumbers(ListNode num1Head, ListNode num2Root)
     {
         var resultHead = new ListNode(0);
 
         var currentNum1Node = num1Head;
-        var currentNum2Node = num2Head;
+        var currentNum2Node = num2Root;
         var currentResultNode = resultHead;
         var left = 0;
         while (currentNum1Node != null && currentNum2Node != null)

@@ -10,58 +10,38 @@ class Program
 
     public static IList<string> GenerateParenthesis(int n)
     {
-        var paranthesis = new List<string>();
-        GenerateParenthesisRecursion(paranthesis, new char[n * 2]);
+        var parenthesis = new List<string>();
 
-        return paranthesis;
+        GenerateParenthesisReccursion(parenthesis, new char[n * 2]);
+
+        return parenthesis;
     }
 
-    public static void GenerateParenthesisRecursion(
-        IList<string> paranthesis, char[] current, int index = 0)
+    private static void GenerateParenthesisReccursion(
+        List<string> output,
+        char[] parenthesis,
+        int depth = 0,
+        int parenthesisCounter = 0)
     {
-        if (index == current.Length)
+        if (parenthesisCounter < 0 || parenthesisCounter > parenthesis.Length / 2)
         {
-            if (IsParenthesisValid(current))
-            {
-                paranthesis.Add(string.Join("", current));
-            }
+            return;
         }
-        else
+        if (depth >= parenthesis.Length)
         {
-            current[index] = '(';
-            GenerateParenthesisRecursion(paranthesis, current, index + 1);
-            current[index] = ')';
-            GenerateParenthesisRecursion(paranthesis, current, index + 1);
-        }
-    }
-
-    private static bool IsParenthesisValid(char[] parenthesis)
-    {
-        var balance = 0;
-        foreach (var ch in parenthesis)
-        {
-            if (ch == '(')
+            if (parenthesisCounter == 0)
             {
-                balance++;
-            }
-            else
-            {
-                balance--;
+                var parenthesisAsString = string.Join("", parenthesis);
+                output.Add(parenthesisAsString);
             }
 
-            if (balance < 0)
-            {
-                return false;
-            }
+            return;
         }
 
-        if (balance == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        parenthesis[depth] = '(';
+        GenerateParenthesisReccursion(output, parenthesis, depth + 1, parenthesisCounter + 1);
+
+        parenthesis[depth] = ')';
+        GenerateParenthesisReccursion(output, parenthesis, depth + 1, parenthesisCounter - 1);
     }
 }
