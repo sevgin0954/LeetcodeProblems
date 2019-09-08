@@ -85,7 +85,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "112. Path Sum", "112. Path 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1114. Print in Order", "1114. Print in Order\1114. Print in Order.csproj", "{2F8A8BF4-EBFA-4AE2-A0CA-ABBD1484EA50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "79. Word Search", "79. Word Search\79. Word Search.csproj", "{91208241-4597-4ACB-A91B-50F6C6CC4502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "79. Word Search", "79. Word Search\79. Word Search.csproj", "{91208241-4597-4ACB-A91B-50F6C6CC4502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "55. Jump Game", "55. Jump Game\55. Jump Game.csproj", "{5F887923-42E8-46A6-BDA2-845918B385AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -261,6 +263,10 @@ Global
 		{91208241-4597-4ACB-A91B-50F6C6CC4502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91208241-4597-4ACB-A91B-50F6C6CC4502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91208241-4597-4ACB-A91B-50F6C6CC4502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F887923-42E8-46A6-BDA2-845918B385AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F887923-42E8-46A6-BDA2-845918B385AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F887923-42E8-46A6-BDA2-845918B385AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F887923-42E8-46A6-BDA2-845918B385AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
